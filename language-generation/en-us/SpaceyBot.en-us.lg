@@ -1,0 +1,19 @@
+[import](common.lg)
+
+
+# ConfirmInput_Prompt_3OCX0n()
+[Activity
+    Text = ${WelcomeUser()}
+]
+
+# SendActivity_5smsVT()
+[Activity
+    Text = Ok! Restart when you're ready!
+]
+
+# SendActivity_ocaTgL()
+[HeroCard
+title = ${dialog.response.content[0].title}
+text =  ${dialog.response.content[0].explanation} 
+image = ${dialog.response.content[0].url}
+]
