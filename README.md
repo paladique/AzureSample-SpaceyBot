@@ -13,10 +13,10 @@ Prompts the user and displays a random image from NASA's [Astronomy Picture of t
 1. Open the Bot Framework Composer, select "Open" and open the folder you cloned/downloaded.
 1. Go to the [NASA API Site](https://api.nasa.gov/) and fill out the form to receive an API key to your email.
 1. Replace the api key placeholder with the NASA api key that has been generated for you.
-    - ![replacing the api key placeholder in bot framework composer](replace-api-key.png)
+    - ![replacing the api key placeholder in bot framework composer](img/replace-api-key.png)
 
 1. Select "Start Bot" at the top right of the composer. You can use the web chat, or install and use the Bot Emulator to test it.
-    -  ![options for running a bot in the bot framework composer](custom-runtime.png)
+    -  ![options for running a bot in the bot framework composer](img/custom-runtime.png)
 
 ## Exporting to C# or JavaScript
 
@@ -25,11 +25,11 @@ Prompts the user and displays a random image from NASA's [Astronomy Picture of t
 1. Switch "Use custom runtime" on
 1. Select "Get a new copy of the runtime code"
 1. Select C# or JS
-    -  ![selecting the language of runtime code in the bot framework composer](custom-runtime.png)
+    -  ![selecting the language of runtime code in the bot framework composer](img/custom-runtime.png)
 1. The code is now in the directory named "runtime" in the bot directory.
-    -  ![location of c sharp runtime folder in windows 10](custom-runtime-location.png)
+    -  ![location of c sharp runtime folder in windows 10](img/custom-runtime-location.png)
 
 ## Read more
 
 - [Bot Framework Composer Documentation](https://docs.microsoft.com/composer/)
-- Microsoft Learn: [Create conversational AI Solutions](https://docs.microsoft.com/learn/paths/create-conversational-ai-solutions/)
+- Microsoft Learn: [Create conversational AI Solutions](https://docs.microsoft.com/learn/paths/create-conversational-ai-solutions)
