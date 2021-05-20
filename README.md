@@ -1,6 +1,8 @@
 # SpaceyBot
 
-A bot built with the Bot Framework Composer
+A bot built with the Bot Framework Composer.
+
+❗[Building with the SDK? Check out this bot sample!](https://github.com/paladique/AzureSample-HTTPBot)
 
 ## What it does
 
