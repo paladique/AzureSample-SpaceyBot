@@ -17,7 +17,7 @@ Prompts the user and displays a random image from NASA's [Astronomy Picture of t
 1. Replace the api key placeholder with the NASA api key that has been generated for you.
     - ![replacing the api key placeholder in bot framework composer](img/replace-api-key.png)
 
-1. Select "Start Bot" at the top right of the composer. You can use the web chat, or install and use the Bot Emulator to test it.
+1. Select "Start Bot" at the top right of the composer. You can test the bot in the Composer with web chat, or install and use the [Bot Emulator](https://github.com/microsoft/botframework-emulator) to test it.
     -  ![options for running a bot in the bot framework composer](img/custom-runtime.png)
 
 ## Exporting to C# or JavaScript
