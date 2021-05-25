@@ -1,0 +1,96 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "$designer": {
+      "name": "azuresample_spaceybot",
+      "description": "",
+      "id": "H0mJns"
+    }
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnConversationUpdateActivity",
+      "$designer": {
+        "id": "376720"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.Foreach",
+          "$designer": {
+            "id": "518944",
+            "name": "Loop: for each item"
+          },
+          "itemsProperty": "turn.Activity.membersAdded",
+          "actions": [
+            {
+              "$kind": "Microsoft.ConfirmInput",
+              "$designer": {
+                "id": "3OCX0n"
+              },
+              "defaultLocale": "en-us",
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": true,
+              "allowInterruptions": false,
+              "prompt": "${ConfirmInput_Prompt_3OCX0n()}",
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "choiceOptions": {
+                "includeNumbers": true,
+                "inlineOrMore": ", or ",
+                "inlineOr": " or ",
+                "inlineSeparator": ", "
+              },
+              "property": "user.confirmed"
+            },
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "9GM21p"
+              },
+              "condition": "user.confirmed",
+              "actions": [
+                {
+                  "$kind": "Microsoft.HttpRequest",
+                  "$designer": {
+                    "id": "fgs77R"
+                  },
+                  "method": "GET",
+                  "url": "https://api.nasa.gov/planetary/apod?api_key=[put NASA api key here]&count=1",
+                  "body": {},
+                  "contentType": "application/json",
+                  "responseType": "json",
+                  "resultProperty": "dialog.response"
+                }
+              ],
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "5smsVT"
+                  },
+                  "activity": "${SendActivity_5smsVT()}"
+                }
+              ]
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "ocaTgL"
+              },
+              "activity": "${SendActivity_ocaTgL()}"
+            }
+          ],
+          "value": "dialog.foreach.value",
+          "index": "dialog.foreach.index"
+        }
+      ]
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/microsoft/BotFramework-Composer/stable/Composer/packages/server/schemas/sdk.schema",
+  "generator": "azuresample_spaceybot.lg",
+  "id": "azuresample_spaceybot",
+  "recognizer": "azuresample_spaceybot.lu.qna"
+}
